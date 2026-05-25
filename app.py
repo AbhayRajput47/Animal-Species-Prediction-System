@@ -137,7 +137,9 @@ with tab1:
                 st.subheader(" Analysis")
                 
                 # Prepare image for model
-                img_resized = img.resize((224, 224))
+                # Convert to RGB to ensure 3 channels (fixes RGBA/PNG issues)
+                img_rgb = img.convert("RGB")
+                img_resized = img_rgb.resize((224, 224))
                 img_array = image.img_to_array(img_resized)
                 img_array = img_array / 255.0
                 img_array = np.expand_dims(img_array, axis=0)
