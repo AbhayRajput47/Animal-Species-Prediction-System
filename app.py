@@ -130,7 +130,7 @@ with tab1:
             col_img, col_info = st.columns([1, 1])
             
             with col_img:
-                st.image(img, caption=image_name, use_container_width=True)
+                st.image(img, caption=image_name)
             
             # Process prediction
             with col_info:
@@ -179,7 +179,7 @@ with tab1:
                         "Confidence": f"{confidence:.2f}%"
                     })
                 
-                st.dataframe(prediction_data, use_container_width=True, hide_index=True)
+                st.dataframe(prediction_data, hide_index=True)
                 
                 # Export prediction in multiple formats
                 st.subheader(" Download Results")
@@ -286,7 +286,7 @@ with tab2:
     st.subheader("📊 Predictions History")
     if "predictions" in st.session_state and st.session_state.predictions:
         df = pd.DataFrame(st.session_state.predictions)
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, hide_index=True)
         
         if st.button("🗑️ Clear History"):
             st.session_state.predictions = []
