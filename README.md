@@ -1,6 +1,7 @@
 # 🐾 Animal Species Prediction System
 
 An AI-powered web application that identifies animal species from images using a VGG16 deep learning model. Built with Streamlit for an intuitive, interactive user interface.
+Live:https://animal-species-prediction-system.streamlit.app/
 
 ##  Table of Contents
 
