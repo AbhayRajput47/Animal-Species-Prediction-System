@@ -8,6 +8,22 @@ from PIL import Image
 import io
 from labels import label_map
 
+# Download Model from Google Drive
+
+import gdown
+import os
+
+file_id = "1A9Z1vPbbpZ1A01ZiSysX1Jp-RIlBGY31"
+
+url = f"https://drive.google.com/uc?id={file_id}"
+
+# Download model if not present
+if not os.path.exists("animal_classifier_model.h5"):
+    gdown.download(
+        url,
+        "animal_classifier_model.h5",
+        quiet=False
+    )
 # Page Configuration
 st.set_page_config(
     page_title="Animal Species Prediction",
