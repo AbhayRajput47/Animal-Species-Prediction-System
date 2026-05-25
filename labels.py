@@ -1,0 +1,12 @@
+label_map = {
+    0: 'dog',
+    1: 'horse',
+    2: 'elephant',
+    3: 'butterfly',
+    4: 'chicken',
+    5: 'cat',
+    6: 'cow',
+    7: 'sheep',
+    8: 'spider',
+    9: 'squirrel'
+}
